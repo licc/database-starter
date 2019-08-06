@@ -1,0 +1,1 @@
+INSERT INTO t_user_balance(`id`, `user_id`, `balance`) VALUES (12, 19, 0);
