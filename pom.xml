@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.huanli</groupId>
     <artifactId>database-starter</artifactId>
-    <name>database-starter</name>
     <version>0.0.1-SNAPSHOT</version>
+    <name>database-starter</name>
     <packaging>jar</packaging>
 
 

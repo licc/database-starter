@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 
 import javax.sql.DataSource;
@@ -84,12 +85,17 @@ public class DataBaseProperties implements InitializingBean {
     @Getter
     @Setter
     public static class MybatisProperties {
-        private String[] basePackages;
+        /**
+         * com.*.*,com.*.mapper
+         * e.g.,
+         */
+        private String basePackages;
 
         /**
          * Locations of MyBatis mapper files.
+         * e.g.,
          */
-        private String[] mapperLocations;
+        private String mapperLocations;
 
         /**
          * Packages to search type aliases. (Package delimiters are ",; \t\n")
@@ -97,12 +103,12 @@ public class DataBaseProperties implements InitializingBean {
         private String typeAliasesPackage;
 
         public Resource[] resolveMapperLocations() {
+            String[] mapperArr = StringUtils.commaDelimitedListToStringArray(mapperLocations);
             List<Resource> resources = new ArrayList<>();
-            if (this.mapperLocations != null) {
-                for (String mapperLocation : this.mapperLocations) {
-                    resources.addAll(Arrays.asList(getResources(mapperLocation)));
-                }
+            for (String mapperLocation : mapperArr) {
+                resources.addAll(Arrays.asList(getResources(mapperLocation)));
             }
+
             return resources.toArray(new Resource[resources.size()]);
         }
 

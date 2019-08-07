@@ -96,7 +96,8 @@ public class DataBaseUtils {
                 .genericBeanDefinition(dataBaseItem.getMapperScannerConfigurer());
         beanDefinitionBuilder.addPropertyValue("sqlSessionFactoryBeanName", dataBaseItem.getName() +
                 "SqlSessionFactory");
-        List<String> list = Arrays.asList(dataBaseItem.getMybatis().getBasePackages());
+        List<String> list =
+                Arrays.asList(StringUtils.commaDelimitedListToStringArray(dataBaseItem.getMybatis().getBasePackages()));
         String basePackage = StringUtils.collectionToCommaDelimitedString(list);
         beanDefinitionBuilder.addPropertyValue("basePackage", basePackage);
         return beanDefinitionBuilder;
