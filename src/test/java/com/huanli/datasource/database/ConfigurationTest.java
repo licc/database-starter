@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = {ConfigurationTest.TestConfiguration.class} )
 public class ConfigurationTest {
     static {
-        System.setProperty("spring.config.location", "classpath:application-h2.properties");
+        System.setProperty("spring.config.location", "classpath:application-h2-local.properties");
     }
     @Autowired
     DataBaseProperties myOrmProperties;
