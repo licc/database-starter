@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * @uther: lihuan
+ * @Author: lihuan
  * @Date: 2019-07-30 16:18
  * @Description:
  */

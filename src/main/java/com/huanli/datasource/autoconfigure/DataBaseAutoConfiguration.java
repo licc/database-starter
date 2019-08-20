@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @uther: lihuan
+ * @Author: lihuan
  * @Date: 2019-08-02 16:54
  * @Description:
  */

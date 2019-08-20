@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @uther: lihuan
+ * @Author: lihuan
  * @Date: 2019-07-29 13:52
  * @Description:
  */

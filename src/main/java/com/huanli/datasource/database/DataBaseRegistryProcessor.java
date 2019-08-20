@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @uther: lihuan
+ * @Author: lihuan
  * @Date: 2019-07-31 16:44
  * @Description:
  */
@@ -53,7 +53,7 @@ public class DataBaseRegistryProcessor implements
             //registry datasource
 
 
-            Map<Object, Object> dataSourceMap = new HashMap<>();
+            Map<Object, Object> dataSourceMap = new HashMap<>(16);
 
             for (Map.Entry<String, Map<String, String>> k : item.getDatasource().entrySet()) {
 

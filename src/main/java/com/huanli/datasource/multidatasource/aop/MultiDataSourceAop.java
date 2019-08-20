@@ -18,6 +18,7 @@ import org.springframework.util.StringUtils;
 import java.lang.reflect.Method;
 
 /**
+ * @Author: lihuan
  * 必须设置DEFAULT的数据源
  * 动态数据源切换
  * @since 2017年11月8日 上午9:20:28
